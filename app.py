@@ -130,10 +130,7 @@ if st.button("🎙️ Start Recording", use_container_width=True):
                 with st.spinner('🤖 AI is analyzing your speech...'):
                     with open(audio_file, 'rb') as f:
                         files = {"audio_file": ("audio.wav", f, "audio/wav")}
-                        response = requests.post(
-                            "http://127.0.0.1:8000/speak",
-                            files=files,
-                            timeout=30
+                       response = requests.post("https://aieng-production.up.railway.app/speak", files=files, timeout=30)
                         )
                 
                 if response.status_code == 200:
