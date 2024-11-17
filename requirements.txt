@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+streamlit
+sounddevice
+wavio
+numpy
+python-multipart
